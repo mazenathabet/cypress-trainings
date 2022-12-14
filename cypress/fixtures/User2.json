@@ -1,0 +1,18 @@
+{
+  "gender": "M",
+  "firstName": "Mazen",
+  "lastName": "Thabet",
+  "BirthDay": "18",
+  "BirthMonth": "December",
+  "BirthYear": "1992",
+  "Email": "fakeEmail1@yopmail.com",
+  "invalidEmail": "invalidEmail@yopmail.com",
+  "companyName": "Freelance",
+  "password": "!@sda1548",
+  "invalidPassword":"sag12as1",
+  "Country": "Egypt",
+  "City": "Cairo",
+  "Address1": "223 Tx. Sao",
+  "ZipCode": 12345,
+  "PhoneNumber": "+215465154885"
+}

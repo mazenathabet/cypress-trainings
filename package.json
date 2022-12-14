@@ -1,0 +1,17 @@
+{
+  "name": "cypress-trainings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open cypress": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.1.0",
+    "faker": "^6.6.6"
+  }
+}
