@@ -1,24 +1,37 @@
+const welcomeMessage = 'Welcome'
+const emailField = '#Email'
+const passwordField = '#Password'
+const rememberMeCheckbox = '#RememberMe'
+const loginButton = '.button-1.login-button'
+const errorMessages = '.message-error.validation-summary-errors'
+const emptyEmailError = '#Email-error'
+
 export class LoginPage {
 
-    welcomeMessage(){
-        return cy.contains("Welcome")
+    login(email,passowrd) {
+        cy.get(emailField).should('be.visible').and('be.enabled').type(email)
+        cy.get(passwordField).should('be.visible').and('be.enabled').type(passowrd)
+        cy.get(loginButton).should('have.css', 'background-color', 'rgb(74, 178, 241)').and('have.css', 'color', 'rgb(255, 255, 255)').click()
     }
-    emailField(){
-        return cy.get('#Email')
+    welcomeMessage() {
+        return cy.contains(welcomeMessage)
     }
-    passwordField(){
-        return cy.get('#Password')
+    emailField() {
+        return cy.get(emailField)
     }
-    rememberMeCheckbox(){
-        return cy.get('#RememberMe')
+    passwordField() {
+        return cy.get(passwordField)
     }
-    loginButton(){
-        return cy.get(".button-1.login-button")
+    rememberMeCheckbox() {
+        return cy.get(rememberMeCheckbox)
     }
-    errorsMessages(){
-        return cy.get('.message-error.validation-summary-errors')
+    loginButton() {
+        return cy.get(loginButton)
     }
-    emptyEmailError(){
-        return cy.get('#Email-error')
+    errorsMessages() {
+        return cy.get(errorMessages)
+    }
+    emptyEmailError() {
+        return cy.get(emptyEmailError)
     }
 }

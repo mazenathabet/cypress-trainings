@@ -1,21 +1,34 @@
+
+// locators
+const registerLink = '.ico-register'
+const loginLink = '.ico-login'
+const logoutLink = '.ico-logout'
+const searchField = '#small-searchterms'
+const searchButton = '#small-search-box-form button'
+const currancyList = '#customerCurrency'
+const productPrice = '.product-item .prices span'
+
 export class HomePage {
-    
-    RegisterLink(){
-        return cy.get(".ico-register")
+
+    goToRegisterPage() {
+        cy.get(registerLink).should('be.visible').click()
     }
-    loginLink(){
-        return cy.get(".ico-login")
+    goToLoginPage() {
+        cy.get(loginLink).should('be.visible').click()
     }
-    logoutLink(){
-        return cy.get('.ico-logout')
+    logoutLink() {
+        return cy.get(logoutLink)
     }
-    searchField(){
-        return cy.get('#small-searchterms')
+    searchField() {
+        return cy.get(searchField)
     }
-    searchButton(){
-        return cy.get('#small-search-box-form button')
+    searchButton() {
+        return cy.get(searchButton)
     }
-    currancyList(){
-        return cy.get('#customerCurrency')
+    currancyList() {
+        return cy.get(currancyList)
+    }
+    productPrice() {
+        return cy.get(productPrice)
     }
 }

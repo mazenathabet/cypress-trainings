@@ -13,5 +13,6 @@ module.exports = defineConfig({
     },
     viewportHeight: 800,
     viewportWidth: 1280,
+    experimentalRunAllSpecs: true,
   },
 });

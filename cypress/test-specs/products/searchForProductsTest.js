@@ -16,27 +16,23 @@ describe('Searching for products tests', () => {
             this.product = product
         })
         cy.visit(Cypress.env("nopCommerceApp"))
-        homePage.loginLink().click()
+        homePage.goToLoginPage()
     })
 
     it('Searching for product with pressing enter', function () {
-        loginPage.emailField().type(this.user2.Email)
-        loginPage.passwordField().type(this.user2.password)
-        loginPage.loginButton().click()
+        loginPage.login(this.user2.Email, this.user2.password)
         homePage.logoutLink().should('be.visible')
-        homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook+'{enter}')
-        productPage.searchPageTitle().should('have.text','Search').and('be.visible')
-        productPage.productItem().children('div').children('a').should('be.visible').and('have.attr','title','Show details for '+this.product.MacBook)
+        homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook + '{enter}')
+        productPage.searchPageTitle().should('have.text', 'Search').and('be.visible')
+        productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook)
     })
     it('Searching for product with pressing search button', function () {
-        loginPage.emailField().type(this.user2.Email)
-        loginPage.passwordField().type(this.user2.password)
-        loginPage.loginButton().click()
+        loginPage.login(this.user2.Email, this.user2.password)
         homePage.logoutLink().should('be.visible')
         homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook)
         homePage.searchButton().click()
-        productPage.searchPageTitle().should('have.text','Search').and('be.visible')
-        productPage.productItem().children('div').children('a').should('be.visible').and('have.attr','title','Show details for '+this.product.MacBook)
+        productPage.searchPageTitle().should('have.text', 'Search').and('be.visible')
+        productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook)
     })
 
 

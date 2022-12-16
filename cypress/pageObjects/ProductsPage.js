@@ -1,9 +1,12 @@
+const searchPageTitle = '.page-title h1'
+const productItem = '.product-item'
+
 export class ProductPage {
 
     searchPageTitle(){
-        return cy.get('.page-title h1')
+        return cy.get(searchPageTitle)
     }
     productItem(){
-        return cy.get('.product-item')
+        return cy.get(productItem)
     }
 }
