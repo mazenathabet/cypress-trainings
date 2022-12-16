@@ -6,8 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     watchForFileChanges: false,
-    // specPattern: 'cypress/examples/**/*.cy.{js,jsx,ts,tsx}',
-    specPattern: 'cypress/test-specs/**/*.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/test-specs/**/*.{js,jsx,ts,tsx,feature}',
     env: {
       "nopCommerceApp": "https://demo.nopcommerce.com/"
     },
