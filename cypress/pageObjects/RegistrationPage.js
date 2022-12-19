@@ -62,3 +62,5 @@ export class RegistrationPage {
         cy.get(submitButton).should('be.visible').click()
     }
 }
+
+export const registrationPage = new RegistrationPage()

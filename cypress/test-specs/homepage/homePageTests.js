@@ -1,25 +1,23 @@
 /// <reference types="cypress"/>
 
-import { HomePage } from "../../pageObjects/HomePage"
+import { homePage } from "../../pageObjects/HomePage"
 
-
-const homepage = new HomePage
 describe('homepage tests', () => {
     beforeEach(() => {
-        cy.visit(Cypress.env("nopCommerceApp"))
+        cy.openHomePage()
     })
 
     it('change the application currancy', function () {
-        homepage.currancyList().children().should('have.length', 2)
-        homepage.currancyList().select('Euro')
-        homepage.productPrice().should('be.visible')
-        homepage.productPrice().each((element) => {
+        homePage.currancyList().children().should('have.length', 2)
+        homePage.currancyList().select('Euro')
+        homePage.productPrice().should('be.visible')
+        homePage.productPrice().each((element) => {
             const price = element.text()
             expect(price.includes("€")).to.be.true
             expect(price.includes("$")).not.to.be.true
         })
-        homepage.currancyList().select('US Dollar')
-        homepage.productPrice().each((element) => {
+        homePage.currancyList().select('US Dollar')
+        homePage.productPrice().each((element) => {
             const price = element.text()
             expect(price.includes("$")).to.be.true
             expect(price.includes("€")).not.to.be.true

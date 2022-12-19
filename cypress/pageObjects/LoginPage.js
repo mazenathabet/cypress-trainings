@@ -9,9 +9,18 @@ const emptyEmailError = '#Email-error'
 export class LoginPage {
 
     login(email,passowrd) {
-        cy.get(emailField).should('be.visible').and('be.enabled').type(email)
-        cy.get(passwordField).should('be.visible').and('be.enabled').type(passowrd)
-        cy.get(loginButton).should('have.css', 'background-color', 'rgb(74, 178, 241)').and('have.css', 'color', 'rgb(255, 255, 255)').click()
+        cy.get(emailField)
+        .should('be.visible')
+        .and('be.enabled')
+        .type(email)
+        cy.get(passwordField)
+        .should('be.visible')
+        .and('be.enabled')
+        .type(passowrd)
+        cy.get(loginButton)
+        .should('have.css', 'background-color', 'rgb(74, 178, 241)')
+        .and('have.css', 'color', 'rgb(255, 255, 255)')
+        .click()
     }
     welcomeMessage() {
         return cy.contains(welcomeMessage)
@@ -35,3 +44,5 @@ export class LoginPage {
         return cy.get(emptyEmailError)
     }
 }
+
+export const loginPage = new LoginPage()

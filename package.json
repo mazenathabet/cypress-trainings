@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
-    "open cypress": "cypress open"
+    "test": "npx cypress run",
+    "cypress:run": "npx cypress open",
+    "chrome:run": "npx cypress run --browser chrome --headed",
+    "spec:login": "npx cypress run --spec cypress/test-specs/login/loginTests.js --headed",
+    "spec:register": "npx cypress run --spec cypress/test-specs/registration/registrationTests.js --headed"
   },
   "keywords": [],
   "author": "",

@@ -32,3 +32,4 @@ export class HomePage {
         return cy.get(productPrice)
     }
 }
+export const  homePage = new HomePage()

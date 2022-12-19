@@ -10,3 +10,4 @@ export class ProductPage {
         return cy.get(productItem)
     }
 }
+export const productPage = new ProductPage()
