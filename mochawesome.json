@@ -1,0 +1,442 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 10,
+    "passes": 8,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-12-20T18:59:19.300Z",
+    "end": "2022-12-20T19:00:31.567Z",
+    "duration": 62623,
+    "testsRegistered": 10,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e6d0789d-2656-4b30-84e3-5b1b04e3febe",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\login\\loginTests.js",
+      "file": "cypress\\test-specs\\login\\loginTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c52a4b99-1a63-4bf1-a5eb-4a1f7b0e97a1",
+          "title": "Login Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "be0439f1-cecf-4e30-95ab-418bfd72ae62",
+              "title": "positive scenarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "login with valid data",
+                  "fullTitle": "Login Tests positive scenarios login with valid data",
+                  "timedOut": null,
+                  "duration": 6259,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.welcomeMessage().should(\"have.text\", \"Welcome, Please Sign In!\").and(\"be.visible\");\n_LoginPage.loginPage.login(this.user2.Email, this.user2.password);\n_HomePage.homePage.logoutLink().should('be.visible');",
+                  "err": {},
+                  "uuid": "8f6b40f2-e610-497d-bdae-d9edaf09fc29",
+                  "parentUUID": "be0439f1-cecf-4e30-95ab-418bfd72ae62",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8f6b40f2-e610-497d-bdae-d9edaf09fc29"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6259,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "512a404c-bc1e-49f0-b596-5f124f7b9c5f",
+              "title": "negative scenarios",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "loging with invalid password",
+                  "fullTitle": "Login Tests negative scenarios loging with invalid password",
+                  "timedOut": null,
+                  "duration": 2352,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.welcomeMessage().should(\"have.text\", \"Welcome, Please Sign In!\").and(\"be.visible\");\n_LoginPage.loginPage.login(this.user2.Email, this.user2.invalidPassword);\n_LoginPage.loginPage.errorsMessages().should('contain.text', \"Login was unsuccessful. Please correct the errors and try again.\").and('be.visible').and('have.css', 'color', 'rgb(228, 67, 75)');\n_LoginPage.loginPage.errorsMessages().children('ul').should('contain.text', 'The credentials provided are incorrect').and('be.visible').and('have.css', 'color', 'rgb(228, 67, 75)');",
+                  "err": {},
+                  "uuid": "7a3a040f-9069-4eeb-9017-88634d917e92",
+                  "parentUUID": "512a404c-bc1e-49f0-b596-5f124f7b9c5f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "loging with invalid email",
+                  "fullTitle": "Login Tests negative scenarios loging with invalid email",
+                  "timedOut": null,
+                  "duration": 2408,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.welcomeMessage().should(\"have.text\", \"Welcome, Please Sign In!\").and(\"be.visible\");\n_LoginPage.loginPage.login(this.user2.invalidEmail, this.user2.password);\n_LoginPage.loginPage.errorsMessages().should('contain.text', \"Login was unsuccessful. Please correct the errors and try again.\").and('be.visible').and('have.css', 'color', 'rgb(228, 67, 75)');\n_LoginPage.loginPage.errorsMessages().children('ul').should('contain.text', 'No customer account found').and('be.visible').and('have.css', 'color', 'rgb(228, 67, 75)');",
+                  "err": {},
+                  "uuid": "7420d8ad-78d4-44d5-9ce4-06987015ed83",
+                  "parentUUID": "512a404c-bc1e-49f0-b596-5f124f7b9c5f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "loging with empty email field",
+                  "fullTitle": "Login Tests negative scenarios loging with empty email field",
+                  "timedOut": null,
+                  "duration": 1564,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.welcomeMessage().should(\"have.text\", \"Welcome, Please Sign In!\").and(\"be.visible\");\n_LoginPage.loginPage.login(\" \", this.user2.password);\n_LoginPage.loginPage.emptyEmailError().should('have.text', 'Please enter your email').and('be.visible').and('have.css', 'color', 'rgb(228, 67, 75)');",
+                  "err": {},
+                  "uuid": "2e18cc5f-7e36-4a16-93b3-a1d877a215e3",
+                  "parentUUID": "512a404c-bc1e-49f0-b596-5f124f7b9c5f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "7a3a040f-9069-4eeb-9017-88634d917e92",
+                "7420d8ad-78d4-44d5-9ce4-06987015ed83",
+                "2e18cc5f-7e36-4a16-93b3-a1d877a215e3"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 6324,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ea3afb8a-f6d8-428a-b52d-f1d896cd9798",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\registration\\registrationTests.js",
+      "file": "cypress\\test-specs\\registration\\registrationTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a48af74-5d25-4180-9e46-c5e25cff6ca0",
+          "title": "Registration Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "register with mandatory fileds ",
+              "fullTitle": "Registration Tests register with mandatory fileds ",
+              "timedOut": null,
+              "duration": 12198,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithMandatoryFieldsOnly(this.user1.firstName, this.user1.lastName, this.user1.Email, this.user1.password);\n_RegistrationPage.registrationPage.registrationCompleteMessage().should(\"have.text\", \"Your registration completed\").and(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.\n    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:20:55)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)\n    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)\n    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)",
+                "diff": null
+              },
+              "uuid": "c89df884-f702-4a33-aa17-a0aad202adf9",
+              "parentUUID": "5a48af74-5d25-4180-9e46-c5e25cff6ca0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "register with existing email",
+              "fullTitle": "Registration Tests register with existing email",
+              "timedOut": null,
+              "duration": 3128,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithMandatoryFieldsOnly(this.user1.firstName, this.user1.lastName, this.user1.Email, this.user1.password);\n_RegistrationPage.registrationPage.registrationErrorValidation().should(\"have.text\", \"The specified email already exists\").and(\"be.visible\");",
+              "err": {},
+              "uuid": "001572fa-a135-4c08-8f86-718956022437",
+              "parentUUID": "5a48af74-5d25-4180-9e46-c5e25cff6ca0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "register with all the data",
+              "fullTitle": "Registration Tests register with all the data",
+              "timedOut": null,
+              "duration": 10112,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithAllData(this.user2.gender, this.user2.firstName, this.user2.lastName, this.user2.BirthDay, this.user2.BirthMonth, this.user2.BirthYear, this.user2.companyName, this.user2.Email, this.user2.password);\n_RegistrationPage.registrationPage.registrationCompleteMessage().should(\"have.text\", \"Your registration completed\").and(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.\n    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:32:55)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)\n    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)\n    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)",
+                "diff": null
+              },
+              "uuid": "5756540b-cd71-4925-86be-ac303c414b42",
+              "parentUUID": "5a48af74-5d25-4180-9e46-c5e25cff6ca0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "001572fa-a135-4c08-8f86-718956022437"
+          ],
+          "failures": [
+            "c89df884-f702-4a33-aa17-a0aad202adf9",
+            "5756540b-cd71-4925-86be-ac303c414b42"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "476efa60-afd9-4bac-b9cd-2c02baef99a2",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\products\\searchForProductsTest.js",
+      "file": "cypress\\test-specs\\products\\searchForProductsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c76e318e-5c7a-4988-8b69-9814375aa40c",
+          "title": "Searching for products tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Searching for product with pressing enter",
+              "fullTitle": "Searching for products tests Searching for product with pressing enter",
+              "timedOut": null,
+              "duration": 10114,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.login(this.user2.Email, this.user2.password);\n_HomePage.homePage.logoutLink().should('be.visible');\n_HomePage.homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook + '{enter}');\n_ProductsPage.productPage.searchPageTitle().should('have.text', 'Search').and('be.visible');\n_ProductsPage.productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook);",
+              "err": {},
+              "uuid": "9de78c07-2077-45f4-88cd-1b00e611d672",
+              "parentUUID": "c76e318e-5c7a-4988-8b69-9814375aa40c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Searching for product with pressing search button",
+              "fullTitle": "Searching for products tests Searching for product with pressing search button",
+              "timedOut": null,
+              "duration": 5283,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.login(this.user2.Email, this.user2.password);\n_HomePage.homePage.logoutLink().should('be.visible');\n_HomePage.homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook);\n_HomePage.homePage.searchButton().click();\n_ProductsPage.productPage.searchPageTitle().should('have.text', 'Search').and('be.visible');\n_ProductsPage.productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook);",
+              "err": {},
+              "uuid": "1945e987-dc3a-410b-a4ad-9745bc736258",
+              "parentUUID": "c76e318e-5c7a-4988-8b69-9814375aa40c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9de78c07-2077-45f4-88cd-1b00e611d672",
+            "1945e987-dc3a-410b-a4ad-9745bc736258"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15397,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "3a037f23-59ce-4c0e-ad75-d70c03820de8",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\homepage\\homePageTests.js",
+      "file": "cypress\\test-specs\\homepage\\homePageTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08e11d76-1363-44b3-a104-ecee6d2052db",
+          "title": "homepage tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "change the application currancy",
+              "fullTitle": "homepage tests change the application currancy",
+              "timedOut": null,
+              "duration": 9205,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.currancyList().children().should('have.length', 2);\n_HomePage.homePage.currancyList().select('Euro');\n_HomePage.homePage.productPrice().should('be.visible');\n_HomePage.homePage.productPrice().each(element => {\n  const price = element.text();\n  expect(price.includes(\"€\")).to.be.true;\n  expect(price.includes(\"$\")).not.to.be.true;\n});\n_HomePage.homePage.currancyList().select('US Dollar');\n_HomePage.homePage.productPrice().each(element => {\n  const price = element.text();\n  expect(price.includes(\"$\")).to.be.true;\n  expect(price.includes(\"€\")).not.to.be.true;\n});",
+              "err": {},
+              "uuid": "d8cc9fea-7b55-4618-b076-031c8e010590",
+              "parentUUID": "08e11d76-1363-44b3-a104-ecee6d2052db",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d8cc9fea-7b55-4618-b076-031c8e010590"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9205,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

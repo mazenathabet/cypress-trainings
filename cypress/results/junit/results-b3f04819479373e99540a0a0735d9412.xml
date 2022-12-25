@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.008" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-12-20T19:16:46" tests="0" file="cypress\test-specs\products\searchForProductsTest.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Searching for products tests" timestamp="2022-12-20T19:16:46" tests="2" time="16.970" failures="0">
+    <testcase name="Searching for products tests Searching for product with pressing enter" time="9.122" classname="Searching for product with pressing enter">
+    </testcase>
+    <testcase name="Searching for products tests Searching for product with pressing search button" time="7.786" classname="Searching for product with pressing search button">
+    </testcase>
+  </testsuite>
+</testsuites>

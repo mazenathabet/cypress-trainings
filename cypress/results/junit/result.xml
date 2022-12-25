@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Root Suite" timestamp="2022-12-20T18:59:34" tests="0" file="cypress\test-specs\login\loginTests.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Login Tests" timestamp="2022-12-20T18:59:34" tests="0" time="0.000" failures="0"></testsuite>
+<testsuite name="positive scenarios" timestamp="2022-12-20T18:59:34" tests="1" time="6.284" failures="0">
+  
+  <testcase name="Login Tests positive scenarios login with valid data" time="6.259" classname="login with valid data"></testcase>
+  
+</testsuite>
+<testsuite name="negative scenarios" timestamp="2022-12-20T18:59:40" tests="3" time="6.344" failures="0">
+  
+  <testcase name="Login Tests negative scenarios loging with invalid password" time="2.352" classname="loging with invalid password"></testcase>
+  
+  <testcase name="Login Tests negative scenarios loging with invalid email" time="2.408" classname="loging with invalid email"></testcase>
+  
+  <testcase name="Login Tests negative scenarios loging with empty email field" time="1.564" classname="loging with empty email field"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2022-12-20T18:59:19" tests="0" file="cypress\test-specs\homepage\homePageTests.js" time="0.000" failures="0"></testsuite>
+<testsuite name="homepage tests" timestamp="2022-12-20T18:59:19" tests="1" time="9.213" failures="0">
+  
+  <testcase name="homepage tests change the application currancy" time="9.205" classname="change the application currancy"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2022-12-20T18:59:49" tests="0" file="cypress\test-specs\registration\registrationTests.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Registration Tests" timestamp="2022-12-20T18:59:49" tests="3" time="25.523" failures="2">
+  
+  <testcase name="Registration Tests register with mandatory fileds " time="0.000" classname="register with mandatory fileds ">
+    
+    <failure message="Timed out retrying after 6000ms: Expected to find element: `.page-body div[class=&apos;result&apos;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.
+    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:20:55)
+    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)
+    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)
+    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)
+    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)
+    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)
+    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)
+    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)
+    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)
+    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)]]></failure>
+    
+  </testcase>
+  
+  <testcase name="Registration Tests register with existing email" time="3.128" classname="register with existing email"></testcase>
+  
+  <testcase name="Registration Tests register with all the data" time="0.000" classname="register with all the data">
+    
+    <failure message="Timed out retrying after 6000ms: Expected to find element: `.page-body div[class=&apos;result&apos;]`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.
+    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:32:55)
+    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)
+    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)
+    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)
+    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)
+    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)
+    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)
+    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)
+    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)
+    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)
+    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)]]></failure>
+    
+  </testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2022-12-20T19:00:16" tests="0" file="cypress\test-specs\products\searchForProductsTest.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Searching for products tests" timestamp="2022-12-20T19:00:16" tests="2" time="15.446" failures="0">
+  
+  <testcase name="Searching for products tests Searching for product with pressing enter" time="10.114" classname="Searching for product with pressing enter"></testcase>
+  
+  <testcase name="Searching for products tests Searching for product with pressing search button" time="5.283" classname="Searching for product with pressing search button"></testcase>
+  
+</testsuite>
+
+</testsuites>

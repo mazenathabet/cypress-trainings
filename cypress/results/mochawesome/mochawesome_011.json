@@ -1,0 +1,153 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-12-20T19:17:07.754Z",
+    "end": "2022-12-20T19:17:39.298Z",
+    "duration": 31544,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "26b28904-0d95-4a06-bc54-0a92922652d6",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\registration\\registrationTests.js",
+      "file": "cypress\\test-specs\\registration\\registrationTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6edb6502-35ad-40e9-bb8b-404bfcb4c746",
+          "title": "Registration Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "register with mandatory fileds ",
+              "fullTitle": "Registration Tests register with mandatory fileds ",
+              "timedOut": null,
+              "duration": 16403,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithMandatoryFieldsOnly(this.user1.firstName, this.user1.lastName, this.user1.Email, this.user1.password);\n_RegistrationPage.registrationPage.registrationCompleteMessage().should(\"have.text\", \"Your registration completed\").and(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.\n    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:20:55)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)\n    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)\n    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)",
+                "diff": null
+              },
+              "uuid": "5066a4c3-f5c1-4beb-b9aa-14071307f88b",
+              "parentUUID": "6edb6502-35ad-40e9-bb8b-404bfcb4c746",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "register with existing email",
+              "fullTitle": "Registration Tests register with existing email",
+              "timedOut": null,
+              "duration": 3882,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithMandatoryFieldsOnly(this.user1.firstName, this.user1.lastName, this.user1.Email, this.user1.password);\n_RegistrationPage.registrationPage.registrationErrorValidation().should(\"have.text\", \"The specified email already exists\").and(\"be.visible\");",
+              "err": {},
+              "uuid": "917d6447-f7ac-4622-81f1-9874e354f0d1",
+              "parentUUID": "6edb6502-35ad-40e9-bb8b-404bfcb4c746",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "register with all the data",
+              "fullTitle": "Registration Tests register with all the data",
+              "timedOut": null,
+              "duration": 11077,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToRegisterPage();\n_RegistrationPage.registrationPage.registerationPageTitle().should(\"have.text\", \"Register\").and(\"be.visible\");\n_RegistrationPage.registrationPage.registerWithAllData(this.user2.gender, this.user2.firstName, this.user2.lastName, this.user2.BirthDay, this.user2.BirthMonth, this.user2.BirthYear, this.user2.companyName, this.user2.Email, this.user2.password);\n_RegistrationPage.registrationPage.registrationCompleteMessage().should(\"have.text\", \"Your registration completed\").and(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `.page-body div[class='result']`, but never found it.\n    at ./cypress/test-specs/registration/registrationTests.js/ (webpack:///./cypress/test-specs/registration/registrationTests.js:32:55)\n    at ../driver/src/cypress/cy.ts/setRunnable/runnable.fn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:156580:43)\n    at callFn (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:107972:21)\n    at ../driver/src/cypress/runner.ts/create/onRunnableRun (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:164209:30)\n    at finallyHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:7881:23)\n    at tryCatcher (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:11327:23)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromiseFromHandler (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9262:31)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9319:18)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromise0 (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9364:10)\n    at ../../node_modules/bluebird/js/release/promise.js/</module.exports/Promise.prototype._settlePromises (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:9444:18)\n    at _drainQueueStep (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6034:12)\n    at _drainQueue (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6027:24)\n    at ../../node_modules/bluebird/js/release/async.js/</Async.prototype._drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:6043:16)\n    at ../../node_modules/bluebird/js/release/async.js/</Async/this.drainQueues (https://demo.nopcommerce.com/__cypress/runner/cypress_runner.js:5913:14)",
+                "diff": null
+              },
+              "uuid": "be033e28-591a-4bbb-88f2-c3bc6db8c860",
+              "parentUUID": "6edb6502-35ad-40e9-bb8b-404bfcb4c746",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "917d6447-f7ac-4622-81f1-9874e354f0d1"
+          ],
+          "failures": [
+            "5066a4c3-f5c1-4beb-b9aa-14071307f88b",
+            "be033e28-591a-4bbb-88f2-c3bc6db8c860"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31362,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-20T19:30:37.414Z",
+    "end": "2022-12-20T19:30:56.111Z",
+    "duration": 18697,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b0b55326-202e-4889-add1-825e84e2a57b",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\products\\searchForProductsTest.js",
+      "file": "cypress\\test-specs\\products\\searchForProductsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16bf0490-39a4-4081-9cc2-196d89bf6318",
+          "title": "Searching for products tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Searching for product with pressing enter",
+              "fullTitle": "Searching for products tests Searching for product with pressing enter",
+              "timedOut": null,
+              "duration": 11067,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.login(this.user2.Email, this.user2.password);\n_HomePage.homePage.logoutLink().should('be.visible');\n_HomePage.homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook + '{enter}');\n_ProductsPage.productPage.searchPageTitle().should('have.text', 'Search').and('be.visible');\n_ProductsPage.productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook);",
+              "err": {},
+              "uuid": "2dfe5c8f-558c-4ac2-b7b1-2c8fa9175575",
+              "parentUUID": "16bf0490-39a4-4081-9cc2-196d89bf6318",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Searching for product with pressing search button",
+              "fullTitle": "Searching for products tests Searching for product with pressing search button",
+              "timedOut": null,
+              "duration": 7515,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.goToLoginPage();\n_LoginPage.loginPage.login(this.user2.Email, this.user2.password);\n_HomePage.homePage.logoutLink().should('be.visible');\n_HomePage.homePage.searchField().should('be.enabled').and('be.visible').type(this.product.MacBook);\n_HomePage.homePage.searchButton().click();\n_ProductsPage.productPage.searchPageTitle().should('have.text', 'Search').and('be.visible');\n_ProductsPage.productPage.productItem().children('div').children('a').should('be.visible').and('have.attr', 'title', 'Show details for ' + this.product.MacBook);",
+              "err": {},
+              "uuid": "bf7e0b5d-95b7-458d-8250-7b0c39c9848d",
+              "parentUUID": "16bf0490-39a4-4081-9cc2-196d89bf6318",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2dfe5c8f-558c-4ac2-b7b1-2c8fa9175575",
+            "bf7e0b5d-95b7-458d-8250-7b0c39c9848d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

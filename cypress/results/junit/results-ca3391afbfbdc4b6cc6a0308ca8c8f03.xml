@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="14.108" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-12-20T19:16:27" tests="0" file="cypress\test-specs\login\loginTests.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login Tests" timestamp="2022-12-20T19:16:27" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="positive scenarios" timestamp="2022-12-20T19:16:27" tests="1" time="6.726" failures="0">
+    <testcase name="Login Tests positive scenarios login with valid data" time="6.713" classname="login with valid data">
+    </testcase>
+  </testsuite>
+  <testsuite name="negative scenarios" timestamp="2022-12-20T19:16:34" tests="3" time="7.352" failures="0">
+    <testcase name="Login Tests negative scenarios loging with invalid password" time="2.560" classname="loging with invalid password">
+    </testcase>
+    <testcase name="Login Tests negative scenarios loging with invalid email" time="2.937" classname="loging with invalid email">
+    </testcase>
+    <testcase name="Login Tests negative scenarios loging with empty email field" time="1.825" classname="loging with empty email field">
+    </testcase>
+  </testsuite>
+</testsuites>

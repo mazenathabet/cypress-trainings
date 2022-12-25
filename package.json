@@ -4,16 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
-    "cypress:run": "npx cypress open",
-    "chrome:run": "npx cypress run --browser chrome --headed",
+    "test": "npx cypress run --record --key b7489417-65b7-4e15-aabb-5be76eace42e",
+    "cypress:open": "npx cypress open --record --key b7489417-65b7-4e15-aabb-5be76eace42e",
+    "chrome:run": "npx cypress run --browser chrome --record --key b7489417-65b7-4e15-aabb-5be76eace42e",
+    "firefox:run": "npx cypress run --browser firefox --record --key b7489417-65b7-4e15-aabb-5be76eace42e",
     "spec:login": "npx cypress run --spec cypress/test-specs/login/loginTests.js --headed",
-    "spec:register": "npx cypress run --spec cypress/test-specs/registration/registrationTests.js --headed"
+    "spec:register": "npx cypress run --spec cypress/test-specs/registration/registrationTests.js --headed",
+    
+    "mochawesome:merge":"npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json & npx marge mochawesome.json",
+    "junit:merge":"npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
+
+    "delete:reports": "rm cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.js",
+    "cypress:chrome:firefox":"npm run test -- --browser firefox --group Firefox --ci-build-id 1 & npm run test -- --browser chrome --group Chrome --ci-build-id 1 "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.1.0"
+    "cypress": "^12.1.0",
+    "cypress-multi-reporters": "^1.6.2",
+    "mocha-junit-reporter": "^2.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

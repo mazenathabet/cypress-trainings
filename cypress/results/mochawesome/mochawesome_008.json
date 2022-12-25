@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-20T19:16:12.277Z",
+    "end": "2022-12-20T19:16:19.288Z",
+    "duration": 7011,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "77e9706c-38de-4543-a7f8-5f29cbcc60d8",
+      "title": "",
+      "fullFile": "cypress\\test-specs\\homepage\\homePageTests.js",
+      "file": "cypress\\test-specs\\homepage\\homePageTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8460b1c5-fdf0-4f43-aa57-d0c4e59bbc31",
+          "title": "homepage tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "change the application currancy",
+              "fullTitle": "homepage tests change the application currancy",
+              "timedOut": null,
+              "duration": 6955,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.homePage.currancyList().children().should('have.length', 2);\n_HomePage.homePage.currancyList().select('Euro');\n_HomePage.homePage.productPrice().should('be.visible');\n_HomePage.homePage.productPrice().each(element => {\n  const price = element.text();\n  expect(price.includes(\"€\")).to.be.true;\n  expect(price.includes(\"$\")).not.to.be.true;\n});\n_HomePage.homePage.currancyList().select('US Dollar');\n_HomePage.homePage.productPrice().each(element => {\n  const price = element.text();\n  expect(price.includes(\"$\")).to.be.true;\n  expect(price.includes(\"€\")).not.to.be.true;\n});",
+              "err": {},
+              "uuid": "5bd06683-198c-4bee-a4f5-2a99320a39af",
+              "parentUUID": "8460b1c5-fdf0-4f43-aa57-d0c4e59bbc31",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5bd06683-198c-4bee-a4f5-2a99320a39af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6955,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
