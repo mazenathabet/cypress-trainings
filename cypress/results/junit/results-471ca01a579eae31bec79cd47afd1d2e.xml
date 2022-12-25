@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="5.819" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2022-12-20T19:26:14" tests="0" file="cypress\test-specs\homepage\homePageTests.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="homepage tests" timestamp="2022-12-20T19:26:14" tests="1" time="5.791" failures="0">
-    <testcase name="homepage tests change the application currancy" time="5.705" classname="change the application currancy">
-    </testcase>
-  </testsuite>
-</testsuites>
